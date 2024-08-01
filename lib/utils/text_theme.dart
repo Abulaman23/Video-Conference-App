@@ -22,6 +22,20 @@ class AppTextTheme {
       fontSize: 19,
       fontWeight: FontWeight.w400,
     ),
+    headlineLarge: GoogleFonts.firaSans(
+      color: Colors.black87,
+      fontWeight: FontWeight.bold,
+    ),
+    bodySmall: GoogleFonts.craftyGirls(
+      color: Colors.black54,
+      fontWeight: FontWeight.w900,
+      fontSize: 16,
+    ),
+    bodyMedium: GoogleFonts.notoSerifBengali(
+      color: Colors.black87,
+      fontWeight: FontWeight.w900,
+      fontSize: 20,
+    ),
   );
   static TextTheme darkTextTheme = TextTheme(
     displayMedium: GoogleFonts.montserrat(
@@ -36,6 +50,23 @@ class AppTextTheme {
       color: Colors.white,
       fontWeight: FontWeight.bold,
       fontSize: 24,
+    ),
+    displaySmall: GoogleFonts.aBeeZee(
+      color: Colors.white,
+      fontSize: 19,
+      fontWeight: FontWeight.w400,
+    ),
+    headlineLarge: GoogleFonts.firaSans(
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+    ),
+    bodySmall: GoogleFonts.craftyGirls(
+      color: Colors.white,
+      fontWeight: FontWeight.w900,
+    ),
+    bodyMedium: GoogleFonts.notoSerifBengali(
+      color: Colors.white,
+      fontWeight: FontWeight.w900,
     ),
   );
 }

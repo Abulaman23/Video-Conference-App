@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_conference_app/screens/forgot_password/forgetpw_modal_bottom_sheet.dart';
 import 'package:video_conference_app/screens/splash_screen_tologin.dart';
 import 'package:video_conference_app/utils/colors.dart';
 
@@ -88,7 +89,9 @@ class _LoginFormState extends State<LoginForm> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  ForgetPasswordScreen.buildShowModalBottomSheet(context);
+                },
                 child: Text(
                   'Forgot Password?',
                   style: Theme.of(context).textTheme.titleSmall,

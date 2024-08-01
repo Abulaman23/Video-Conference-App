@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     formattedDate,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 12,
                       color: Color.fromARGB(255, 84, 191, 12),
                       fontWeight: FontWeight.w700,
                     ),
@@ -155,9 +155,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 child: GestureDetector(
-                  onTap: () {
-                    DropdownMenu;
-                  },
                   child: SizedBox(
                     width: size.width * 0.9,
                     height: size.height * 0.045,
