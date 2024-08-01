@@ -82,7 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -101,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Text(
                     'Conferencia',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black87,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -127,14 +126,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Text(
                   'MAKE VIDEO CALLS HINDERFREE WITH EVERYONE!',
                   style: TextStyle(
-                    fontSize: 22,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Colors.black,
                     shadows: [
                       Shadow(
                         blurRadius: 50,
                         color: Color.fromARGB(255, 84, 191, 12),
-                        offset: Offset(2, 2),
+                        offset: Offset(5, 8),
                       ),
                     ],
                   ),
@@ -147,14 +146,41 @@ class _HomeScreenState extends State<HomeScreen> {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 84, 191, 12),
+                  backgroundColor: Colors.black87,
                   shape: const ContinuousRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
                 ),
-                child: GestureDetector(
+                child: PopupMenuButton<String>(
+                  onSelected: (String result) {
+                    // Handle the selected menu item.
+                    // ignore: avoid_print
+                    print('Selected: $result');
+                  },
+                  itemBuilder: (BuildContext context) =>
+                      <PopupMenuEntry<String>>[
+                    const PopupMenuItem<String>(
+                      value: 'Start an instant meeting',
+                      child: DropdownItem(
+                        icon: Icons.add,
+                        text: 'Start an instant meeting',
+                      ),
+                    ),
+                    const PopupMenuItem<String>(
+                      value: 'Create a meeting for later',
+                      child: DropdownItem(
+                          icon: Icons.link_outlined,
+                          text: 'Create a meeting for later'),
+                    ),
+                    const PopupMenuItem<String>(
+                      value: 'Schedule in Calendar',
+                      child: DropdownItem(
+                          icon: Icons.calendar_month,
+                          text: 'Schedule in Calendar'),
+                    ),
+                  ],
                   child: SizedBox(
                     width: size.width * 0.9,
                     height: size.height * 0.045,
@@ -164,12 +190,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         Icon(
                           Icons.video_call_sharp,
                           size: 40,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                         Text(
                           'New Meeting',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
                           ),
@@ -194,19 +220,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       labelText: 'Enter the joining code',
                       labelStyle: const TextStyle(
                         fontSize: 18,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.w500,
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
-                          color: Colors.white,
+                          color: Colors.black87,
                         ),
                       ),
                     ),
@@ -227,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: size.height * 0.04,
               ),
               const Divider(
-                color: Colors.white,
+                color: Colors.black38,
                 indent: 18,
                 endIndent: 18,
               ),
@@ -265,7 +291,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 _texts[index],
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -288,7 +314,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: const Icon(
                           Icons.arrow_back_ios,
                           size: 20,
-                          color: Colors.white,
+                          color: Colors.black87,
                         ),
                       ),
                     ),
@@ -300,7 +326,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: const Icon(
                           Icons.arrow_forward_ios,
                           size: 20,
-                          color: Colors.white,
+                          color: Colors.black87,
                         ),
                       ),
                     ),
@@ -311,6 +337,35 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class DropdownItem extends StatelessWidget {
+  const DropdownItem({
+    super.key,
+    required this.icon,
+    required this.text,
+  });
+  final IconData icon;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Icon(
+          icon,
+          color: Colors.black87,
+        ),
+        const SizedBox(width: 5),
+        Text(
+          text,
+          style: const TextStyle(
+            fontSize: 18,
+          ),
+        ),
+      ],
     );
   }
 }
