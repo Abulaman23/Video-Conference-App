@@ -32,7 +32,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       ),
       OnboardingPageWidget(
         model: OnBoardingModel(
-            image: 'assets/images/video_conference_2.jpg',
+            image: 'assets/images/video_conference_2.png',
             title: "Connect Beyond Borders",
             subtitle: "Break the barriers of distance and connect globally.",
             counterText: "2/3",

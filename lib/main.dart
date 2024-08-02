@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_conference_app/screens/login_screen_2.dart';
+import 'package:video_conference_app/screens/splash_screen.dart';
 import 'package:video_conference_app/utils/themes.dart';
 //import 'package:video_conference_app/screens/splash_screen.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen2(),
+      home: const SplashScreen(),
     );
   }
 }

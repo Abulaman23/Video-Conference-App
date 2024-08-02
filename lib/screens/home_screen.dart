@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:video_conference_app/screens/profile_screen.dart';
+import 'package:video_conference_app/widgets/drop_down_item.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -337,35 +338,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class DropdownItem extends StatelessWidget {
-  const DropdownItem({
-    super.key,
-    required this.icon,
-    required this.text,
-  });
-  final IconData icon;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          icon,
-          color: Colors.black87,
-        ),
-        const SizedBox(width: 5),
-        Text(
-          text,
-          style: const TextStyle(
-            fontSize: 18,
-          ),
-        ),
-      ],
     );
   }
 }

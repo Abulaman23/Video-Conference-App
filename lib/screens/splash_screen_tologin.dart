@@ -34,7 +34,7 @@ class _SplashScreenToLoginState extends State<SplashScreenToLogin> {
                   opacity: animate ? 1 : 0,
                   child: const Image(
                     image: AssetImage(
-                      'assets/images/splash_icon.jpg',
+                      'assets/images/splash_icon.png',
                     ),
                     height: 100,
                     opacity: AlwaysStoppedAnimation(0.8),
@@ -71,7 +71,7 @@ class _SplashScreenToLoginState extends State<SplashScreenToLogin> {
                   duration: const Duration(milliseconds: 2000),
                   opacity: animate ? 1 : 0,
                   child: const Image(
-                    image: AssetImage('assets/images/splash_screen.jpg'),
+                    image: AssetImage('assets/images/splash_screen.png'),
                   ),
                 ),
               ),

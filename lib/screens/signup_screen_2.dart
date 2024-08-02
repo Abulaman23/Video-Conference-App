@@ -23,7 +23,7 @@ class _SignUpScreen2State extends State<SignUpScreen2> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image(
-                  image: const AssetImage('assets/images/login_page.jpg'),
+                  image: const AssetImage('assets/images/login_page.png'),
                   height: size.height * 0.2,
                 ),
                 const Text(
@@ -57,13 +57,9 @@ class _SignUpScreen2State extends State<SignUpScreen2> {
                           width: 50,
                         ),
                         onPressed: () {},
-                        label: const Text(
+                        label: Text(
                           'Sign-in with Google',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black87,
-                            fontSize: 16,
-                          ),
+                          style: Theme.of(context).textTheme.titleSmall,
                         ),
                       ),
                     ),
