@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ForgetPwBtnWidget extends StatelessWidget {
   const ForgetPwBtnWidget({
@@ -19,7 +20,7 @@ class ForgetPwBtnWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(18),
+        padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.grey.shade300,
@@ -29,6 +30,7 @@ class ForgetPwBtnWidget extends StatelessWidget {
             Icon(
               iconBtn,
               size: 60,
+              color: Colors.black87,
             ),
             const SizedBox(width: 10),
             Column(
@@ -36,11 +38,18 @@ class ForgetPwBtnWidget extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.displaySmall,
+                  style: GoogleFonts.aBeeZee(
+                    color: Colors.black,
+                    fontSize: 19,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
                 Text(
                   subTitle,
-                  style: Theme.of(context).textTheme.titleSmall,
+                  style: GoogleFonts.poppins(
+                    color: Colors.black54,
+                    fontSize: 15,
+                  ),
                 ),
               ],
             ),
